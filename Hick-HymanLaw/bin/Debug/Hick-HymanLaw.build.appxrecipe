@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DEEPANSHUGAUTAM</Machine>
+    <WindowsUser>DeepanshuGautam</WindowsUser>
+    <TargetPlatformIdentifier>WindowsPhoneApp</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>3ba1efe4-c49a-4ef5-87cb-b24ce56beba9</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\Hick-HymanLaw.exe">
+      <PackagePath>Hick-HymanLaw.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\Logo.scale-240.png">
+      <PackagePath>Assets\Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\SmallLogo.scale-240.png">
+      <PackagePath>Assets\SmallLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\SplashScreen.scale-240.png">
+      <PackagePath>Assets\SplashScreen.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\Square71x71Logo.scale-240.png">
+      <PackagePath>Assets\Square71x71Logo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\StoreLogo.scale-240.png">
+      <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\WideLogo.scale-240.png">
+      <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Common\ReadMe.txt">
+      <PackagePath>Common\ReadMe.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\DataModel\SampleData.json">
+      <PackagePath>DataModel\SampleData.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\Hick-HymanLaw.xr.xml">
+      <PackagePath>Hick-HymanLaw.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\ItemPage.xbf">
+      <PackagePath>ItemPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\PivotPage.xbf">
+      <PackagePath>PivotPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
