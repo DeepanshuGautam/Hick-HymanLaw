@@ -41,6 +41,9 @@
       <PackagePath>Assets\StoreLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\tasks.png">
+      <PackagePath>Assets\tasks.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\Assets\WideLogo.scale-240.png">
       <PackagePath>Assets\WideLogo.scale-240.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -57,8 +60,14 @@
     <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\HomePage.xbf">
+      <PackagePath>HomePage.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\ItemPage.xbf">
       <PackagePath>ItemPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\LinearPage.xbf">
+      <PackagePath>LinearPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\PivotPage.xbf">
       <PackagePath>PivotPage.xbf</PackagePath>

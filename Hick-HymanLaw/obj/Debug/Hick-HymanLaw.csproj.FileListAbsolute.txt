@@ -35,3 +35,13 @@ C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-Hyman
 C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\qualifiers.txt.intermediate
 C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\ProjectArchitectures.txt
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\HomePage.g.i.cs
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\HomePage.g.cs
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\HomePage.xaml
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\HomePage.xbf
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\HomePage.xbf
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\LinearPage.g.i.cs
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\LinearPage.g.cs
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\LinearPage.xaml
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\LinearPage.xbf
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\LinearPage.xbf

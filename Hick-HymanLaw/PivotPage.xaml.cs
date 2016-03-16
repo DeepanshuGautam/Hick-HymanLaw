@@ -27,6 +27,7 @@ namespace Hick_HymanLaw
     {
         private const string FirstGroupName = "FirstGroup";
         private const string SecondGroupName = "SecondGroup";
+        private const string ThirdGroupName = "ThirdGroup";
 
         private readonly NavigationHelper navigationHelper;
         private readonly ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -164,5 +165,21 @@ namespace Hick_HymanLaw
         }
 
         #endregion
+
+        private void back_click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
+
+        private void exit_click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
+        private async void ThirdPivot_Loaded(object sender, RoutedEventArgs e)
+        {
+            var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-3");
+            this.DefaultViewModel[ThirdGroupName] = sampleDataGroup;
+        }
     }
 }

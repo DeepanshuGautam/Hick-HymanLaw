@@ -33,16 +33,29 @@
 
         <!-- Title Panel -->
         <StackPanel Grid.Row="0" Margin="19,0,0,0">
-            <TextBlock x:Uid="Header" Text="MY APPLICATION" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
+            <TextBlock x:Uid="Header" Text="MY TASKS" Style="{ThemeResource TitleTextBlockStyle}" Margin="0,12,0,0"/>
             <TextBlock Text="{Binding Title}" Style="{ThemeResource HeaderTextBlockStyle}" Margin="0,-6.5,0,26.5" CharacterSpacing="{ThemeResource PivotHeaderItemCharacterSpacing}" />
         </StackPanel>
 
+        <TextBlock 
+            Grid.Row="1"
+            Text="{Binding Content}"
+            Style="{ThemeResource BodyTextBlockStyle}"
+            Margin="19,0,10,0"
+            />
         <!-- 
             TODO: Content should be placed within the following grid 
                   to show details for the current item
-        -->
-        <Grid Grid.Row="1" x:Name="ContentRoot" Margin="19,9.5,19,0">
-
-        </Grid>
+        -->        
     </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:Uid="back_button" x:Name="backButton" Label="back" Icon="Back" Click="back_click"/>
+            <AppBarButton x:Uid="exit_button" x:Name="exitButton" Label="exit" Icon="Cancel" Click="exit_click"/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Uid="about" x:Name="about" Label="about" />
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>

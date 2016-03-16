@@ -112,5 +112,15 @@ namespace Hick_HymanLaw
         }
 
         #endregion
+
+        private void back_click(object sender, RoutedEventArgs e)
+        {
+            Frame.GoBack();
+        }
+
+        private void exit_click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
     }
 }
