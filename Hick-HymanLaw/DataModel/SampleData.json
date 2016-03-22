@@ -1,8 +1,7 @@
 {"Groups":[
   {
     "UniqueId": "Group-1",
-    "Title": "Personal Taks",
-    "Subtitle": "Personal Taks",
+    "Title": "Personal Taks",    
     "ImagePath": "Assets/DarkGray.png",
     "Description" : "List of all personal tasks.",
     "Items":
@@ -10,32 +9,31 @@
       {
         "UniqueId": "Group-1-Item-1",
         "Title": "Wish aniversary",
-        "Subtitle": "Wish mom dad",
+        "Importance": true,
         "ImagePath": "Assets/LightGray.png",
-        "Description" : "wish mon dad",
-        "Content" : "Wish marriage aniversary to mom, dad on 25th of coming month."
+        "Description": "wish mon dad",
+        "Content": "Wish marriage aniversary to mom, dad on 25th of coming month."
       },
       {
         "UniqueId": "Group-1-Item-2",
         "Title": "Diary writing",
-        "Subtitle": "Diary writing",
+        "Importance": false,
         "ImagePath": "Assets/DarkGray.png",
-        "Description" : "Personal diary writing",
-        "Content" : "Write the description about how I celebrated my birthday."
+        "Description": "Personal diary writing",
+        "Content": "Write the description about how I celebrated my birthday."
       }
     ]
   },
   {
     "UniqueId": "Group-2",
     "Title": "Academic Tasks",
-    "Subtitle": "Academic Tasks",
     "ImagePath": "Assets/LightGray.png",
     "Description": "List of all  tasks.",
     "Items": [
       {
         "UniqueId": "Group-2-Item-1",
         "Title": "Enroll for C++",
-        "Subtitle": "Enroll for C++",
+        "Importance": false,
         "ImagePath": "Assets/DarkGray.png",
         "Description": "enrollment",
         "Content": "Enroll for C++ course on edX."
@@ -52,6 +50,7 @@
       {
         "UniqueId": "Group-3-Item-1",
         "Title": "Buy medicines",
+        "Importance": false,
         "Subtitle": "Buy medicines",
         "ImagePath": "Assets/MediumGray.png",
         "Description": "Buy Medicines",

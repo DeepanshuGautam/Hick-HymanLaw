@@ -23,11 +23,11 @@ namespace Hick_HymanLaw.Data
     /// </summary>
     public class SampleDataItem
     {
-        public SampleDataItem(String uniqueId, String title, String subtitle, String imagePath, String description, String content)
+        public SampleDataItem(String uniqueId, String title, bool importance, String imagePath, String description, String content)
         {
             this.UniqueId = uniqueId;
             this.Title = title;
-            this.Subtitle = subtitle;
+            this.Importance = importance;
             this.Description = description;
             this.ImagePath = imagePath;
             this.Content = content;
@@ -35,7 +35,7 @@ namespace Hick_HymanLaw.Data
 
         public string UniqueId { get; private set; }
         public string Title { get; private set; }
-        public string Subtitle { get; private set; }
+        public bool Importance { get; set; }
         public string Description { get; private set; }
         public string ImagePath { get; private set; }
         public string Content { get; private set; }
@@ -51,11 +51,10 @@ namespace Hick_HymanLaw.Data
     /// </summary>
     public class SampleDataGroup
     {
-        public SampleDataGroup(String uniqueId, String title, String subtitle, String imagePath, String description)
+        public SampleDataGroup(String uniqueId, String title, String imagePath, String description)
         {
             this.UniqueId = uniqueId;
             this.Title = title;
-            this.Subtitle = subtitle;
             this.Description = description;
             this.ImagePath = imagePath;
             this.Items = new ObservableCollection<SampleDataItem>();
@@ -63,7 +62,6 @@ namespace Hick_HymanLaw.Data
 
         public string UniqueId { get; private set; }
         public string Title { get; private set; }
-        public string Subtitle { get; private set; }
         public string Description { get; private set; }
         public string ImagePath { get; private set; }
         public ObservableCollection<SampleDataItem> Items { get; private set; }
@@ -85,6 +83,7 @@ namespace Hick_HymanLaw.Data
         private static SampleDataSource _sampleDataSource = new SampleDataSource();
 
         private ObservableCollection<SampleDataGroup> _groups = new ObservableCollection<SampleDataGroup>();
+
         public ObservableCollection<SampleDataGroup> Groups
         {
             get { return this._groups; }
@@ -106,6 +105,22 @@ namespace Hick_HymanLaw.Data
             return null;
         }
 
+        public static async Task<IEnumerable<SampleDataGroup>> GetAllAsync()
+        {
+            await _sampleDataSource.GetAllTasksAsync();
+
+            return _sampleDataSource.Groups;
+        }
+
+        public static async Task<SampleDataGroup> GetAllAsync(string uniqueId)
+        {
+            await _sampleDataSource.GetAllTasksAsync();
+            // Simple linear search is acceptable for small data sets
+            var matches = _sampleDataSource.Groups.Where((group) => group.UniqueId.Equals(uniqueId));
+            if (matches.Count() == 1) return matches.First();
+            return null;
+        }
+
         public static async Task<SampleDataItem> GetItemAsync(string uniqueId)
         {
             await _sampleDataSource.GetSampleDataAsync();
@@ -117,8 +132,10 @@ namespace Hick_HymanLaw.Data
 
         private async Task GetSampleDataAsync()
         {
+            /*
             if (this._groups.Count != 0)
                 return;
+            */
 
             Uri dataUri = new Uri("ms-appx:///DataModel/SampleData.json");
 
@@ -131,8 +148,7 @@ namespace Hick_HymanLaw.Data
             {
                 JsonObject groupObject = groupValue.GetObject();
                 SampleDataGroup group = new SampleDataGroup(groupObject["UniqueId"].GetString(),
-                                                            groupObject["Title"].GetString(),
-                                                            groupObject["Subtitle"].GetString(),
+                                                            groupObject["Title"].GetString(),         
                                                             groupObject["ImagePath"].GetString(),
                                                             groupObject["Description"].GetString());
 
@@ -141,13 +157,79 @@ namespace Hick_HymanLaw.Data
                     JsonObject itemObject = itemValue.GetObject();
                     group.Items.Add(new SampleDataItem(itemObject["UniqueId"].GetString(),
                                                        itemObject["Title"].GetString(),
-                                                       itemObject["Subtitle"].GetString(),
+                                                       itemObject["Importance"].GetBoolean(),
                                                        itemObject["ImagePath"].GetString(),
                                                        itemObject["Description"].GetString(),
                                                        itemObject["Content"].GetString()));
                 }
                 this.Groups.Add(group);
             }
+
+            SampleDataGroup impGroup = new SampleDataGroup("Group-4",
+                                                            "Important Tasks",
+                                                            "Assets/DarkGray.png",
+                                                            "A list of important tasks");
+            foreach (JsonValue groupValue in jsonArray)
+            {
+                JsonObject groupObject = groupValue.GetObject();
+                
+
+                foreach (JsonValue itemValue in groupObject["Items"].GetArray())
+                {                   
+                    JsonObject itemObject = itemValue.GetObject();
+                    if(itemObject["Importance"].GetBoolean() == true)
+                    {
+                        impGroup.Items.Add(new SampleDataItem(itemObject["UniqueId"].GetString(),
+                                                       itemObject["Title"].GetString(),
+                                                       itemObject["Importance"].GetBoolean(),
+                                                       itemObject["ImagePath"].GetString(),
+                                                       itemObject["Description"].GetString(),
+                                                       itemObject["Content"].GetString()));
+                    }
+                    
+                }               
+            }
+            this.Groups.Add(impGroup);
+        }
+
+        private async Task GetAllTasksAsync()
+        {
+            /*
+            if (this._groups.Count != 0)
+                return;
+
+            */
+
+            Uri dataUri = new Uri("ms-appx:///DataModel/SampleData.json");
+
+            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+            string jsonText = await FileIO.ReadTextAsync(file);
+            JsonObject jsonObject = JsonObject.Parse(jsonText);
+            JsonArray jsonArray = jsonObject["Groups"].GetArray();
+
+            SampleDataGroup impGroup = new SampleDataGroup("allTasks",
+                                                            "All Tasks",
+                                                            "Assets/DarkGray.png",
+                                                            "A complete list of all tasks");
+            foreach (JsonValue groupValue in jsonArray)
+            {
+                JsonObject groupObject = groupValue.GetObject();
+
+
+                foreach (JsonValue itemValue in groupObject["Items"].GetArray())
+                {
+                    JsonObject itemObject = itemValue.GetObject();
+                   
+                    impGroup.Items.Add(new SampleDataItem(itemObject["UniqueId"].GetString(),
+                                                    itemObject["Title"].GetString(),
+                                                    itemObject["Importance"].GetBoolean(),
+                                                    itemObject["ImagePath"].GetString(),
+                                                    itemObject["Description"].GetString(),
+                                                    itemObject["Content"].GetString()));                    
+
+                }
+            }
+            this.Groups.Add(impGroup);
         }
     }
 }

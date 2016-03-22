@@ -28,6 +28,7 @@ namespace Hick_HymanLaw
         private const string FirstGroupName = "FirstGroup";
         private const string SecondGroupName = "SecondGroup";
         private const string ThirdGroupName = "ThirdGroup";
+        private const string FourthGroupName = "FourthGroup";
 
         private readonly NavigationHelper navigationHelper;
         private readonly ObservableDictionary defaultViewModel = new ObservableDictionary();
@@ -103,8 +104,8 @@ namespace Hick_HymanLaw
             var newItem = new SampleDataItem(
                 string.Format(CultureInfo.InvariantCulture, "Group-{0}-Item-{1}", this.pivot.SelectedIndex + 1, nextItemId),
                 string.Format(CultureInfo.CurrentCulture, this.resourceLoader.GetString("NewItemTitle"), nextItemId),
-                string.Empty,
-                string.Empty,
+                false,
+                string.Empty,                
                 this.resourceLoader.GetString("NewItemDescription"),
                 string.Empty);
 
@@ -180,6 +181,17 @@ namespace Hick_HymanLaw
         {
             var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-3");
             this.DefaultViewModel[ThirdGroupName] = sampleDataGroup;
+        }
+
+        private async void FouthPivot_Loaded(object sender, RoutedEventArgs e)
+        {
+            var sampleDataGroup = await SampleDataSource.GetGroupAsync("Group-4");
+            this.DefaultViewModel[FourthGroupName] = sampleDataGroup;
+        }
+
+        private void add_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Add));
         }
     }
 }

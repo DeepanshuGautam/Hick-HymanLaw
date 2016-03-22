@@ -34,7 +34,7 @@
                 d:DataContext="{Binding Groups[0], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}"
                 CommonNavigationTransitionInfo.IsStaggerElement="True">
                 <!--Double line list with text wrapping-->
-                <ListView x:ConnectionId='3'
+                <ListView x:ConnectionId='4'
                     ItemsSource="{Binding Items}"
                     IsItemClickEnabled="True"
                                                   
@@ -70,7 +70,7 @@
                 DataContext="{Binding SecondGroup}"
                 d:DataContext="{Binding Groups[1], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}">
                 <!--Double line list no text wrapping-->
-                <ListView x:ConnectionId='2'
+                <ListView x:ConnectionId='3'
                     ItemsSource="{Binding Items}"
                     IsItemClickEnabled="True"
                                                   
@@ -103,6 +103,39 @@
                 DataContext="{Binding ThirdGroup}"
                 d:DataContext="{Binding Groups[1], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}">
                 <!--Double line list no text wrapping-->
+                <ListView x:ConnectionId='2'
+                    ItemsSource="{Binding Items}"
+                    IsItemClickEnabled="True"
+                                                  
+                                              
+                    ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,9.5">
+                                <TextBlock
+                                    Text="{Binding Title}"
+                                    Pivot.SlideInAnimationGroup="1"
+                                    CommonNavigationTransitionInfo.IsStaggerElement="True"
+                                    Style="{StaticResource ListViewItemTextBlockStyle}"/>
+                                <TextBlock
+                                    Text="{Binding Description}"
+                                    Pivot.SlideInAnimationGroup="2"
+                                    CommonNavigationTransitionInfo.IsStaggerElement="True"
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
+            
+            <!-- Pivot item four-->
+            <PivotItem
+                x:Uid="Important Taks"
+                Margin="19,14.5,0,0"
+                Header="Important Tasks"
+                DataContext="{Binding FourthGroup}"
+                d:DataContext="{Binding Groups[1], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}">
+                <!--Double line list no text wrapping-->
                 <ListView x:ConnectionId='1'
                     ItemsSource="{Binding Items}"
                     IsItemClickEnabled="True"
@@ -132,9 +165,9 @@
 
     <Page.BottomAppBar>
         <CommandBar>
-            <AppBarButton x:ConnectionId='4' x:Uid="back_button" x:Name="backButton" Label="back" Icon="Back"                   />
-            <AppBarButton x:ConnectionId='5' x:Uid="add_button" x:Name="addButton" Label="add" Icon="Add"                               />
-            <AppBarButton x:ConnectionId='6' x:Uid="exit_button" x:Name="exitButton" Label="exit" Icon="Cancel"                   />
+            <AppBarButton x:ConnectionId='5' x:Uid="back_button" x:Name="backButton" Label="back" Icon="Back"                   />
+            <AppBarButton x:ConnectionId='6' x:Uid="add_button" x:Name="addButton" Label="add" Icon="Add"                   />
+            <AppBarButton x:ConnectionId='7' x:Uid="exit_button" x:Name="exitButton" Label="exit" Icon="Cancel"                   />
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Uid="about" x:Name="about" Label="about" />
             </CommandBar.SecondaryCommands>

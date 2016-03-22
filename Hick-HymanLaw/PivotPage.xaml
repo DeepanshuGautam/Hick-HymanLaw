@@ -127,13 +127,46 @@
                     </ListView.ItemTemplate>
                 </ListView>
             </PivotItem>
+            
+            <!-- Pivot item four-->
+            <PivotItem
+                x:Uid="Important Taks"
+                Margin="19,14.5,0,0"
+                Header="Important Tasks"
+                DataContext="{Binding FourthGroup}"
+                d:DataContext="{Binding Groups[1], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}">
+                <!--Double line list no text wrapping-->
+                <ListView
+                    ItemsSource="{Binding Items}"
+                    IsItemClickEnabled="True"
+                    ItemClick="ItemView_ItemClick"
+                    Loaded="FouthPivot_Loaded"
+                    ContinuumNavigationTransitionInfo.ExitElementContainer="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,9.5">
+                                <TextBlock
+                                    Text="{Binding Title}"
+                                    Pivot.SlideInAnimationGroup="1"
+                                    CommonNavigationTransitionInfo.IsStaggerElement="True"
+                                    Style="{StaticResource ListViewItemTextBlockStyle}"/>
+                                <TextBlock
+                                    Text="{Binding Description}"
+                                    Pivot.SlideInAnimationGroup="2"
+                                    CommonNavigationTransitionInfo.IsStaggerElement="True"
+                                    Style="{StaticResource ListViewItemContentTextBlockStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </PivotItem>
         </Pivot>
     </Grid>
 
     <Page.BottomAppBar>
         <CommandBar>
             <AppBarButton x:Uid="back_button" x:Name="backButton" Label="back" Icon="Back" Click="back_click"/>
-            <AppBarButton x:Uid="add_button" x:Name="addButton" Label="add" Icon="Add" Click="AddAppBarButton_Click" />
+            <AppBarButton x:Uid="add_button" x:Name="addButton" Label="add" Icon="Add" Click="add_Click" />
             <AppBarButton x:Uid="exit_button" x:Name="exitButton" Label="exit" Icon="Cancel" Click="exit_click"/>
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Uid="about" x:Name="about" Label="about" />
