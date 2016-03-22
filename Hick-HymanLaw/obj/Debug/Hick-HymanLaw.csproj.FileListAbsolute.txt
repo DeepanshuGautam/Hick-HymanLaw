@@ -97,3 +97,8 @@ C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\Hick-HymanLaw\Hick-HymanLa
 C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.g.cs
 C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.xaml
 C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.xbf
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\bin\Debug\Add.xbf
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.g.i.cs
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.g.cs
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.xaml
+C:\Users\DeepanshuGautam\Documents\Visual Studio 2015\WindowsProjects\Hick-HymanLaw\Hick-HymanLaw\obj\Debug\Add.xbf
